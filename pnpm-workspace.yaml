@@ -6,3 +6,15 @@ overrides:
   ignore: 7.0.5
   '@csstools/css-color-parser': 4.2.1
   '@csstools/css-syntax-patches-for-csstree': 1.1.9
+
+onlyBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - '@swc/core'
+  - '@tailwindcss/oxide'
+  - bcrypt
+  - core-js
+  - esbuild
+  - prisma
+  - sharp
+  - unrs-resolver
