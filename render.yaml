@@ -3,7 +3,7 @@ services:
     name: children-ecommerce-api
     runtime: node
     plan: free
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build:server
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm exec prisma generate && pnpm run build:server
     startCommand: sqlite3 prisma/dev.db < prisma/sqlite-init.sql && pnpm exec prisma generate && pnpm exec prisma db seed && pnpm exec ts-node -r tsconfig-paths/register --transpile-only --project tsconfig.server.json server/dev-host.ts
     healthCheckPath: /health
     envVars:
