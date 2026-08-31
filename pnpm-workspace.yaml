@@ -7,6 +7,7 @@ overrides:
   '@csstools/css-color-parser': 4.2.1
   '@csstools/css-syntax-patches-for-csstree': 1.1.9
 
+# pnpm 10: onlyBuiltDependencies. pnpm 11+ (Render): allowBuilds.
 onlyBuiltDependencies:
   - '@prisma/client'
   - '@prisma/engines'
@@ -18,3 +19,15 @@ onlyBuiltDependencies:
   - prisma
   - sharp
   - unrs-resolver
+
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  '@swc/core': true
+  '@tailwindcss/oxide': true
+  bcrypt: true
+  core-js: true
+  esbuild: true
+  prisma: true
+  sharp: true
+  unrs-resolver: true

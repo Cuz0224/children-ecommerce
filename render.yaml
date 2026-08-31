@@ -9,6 +9,8 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 22
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
       - key: DATABASE_URL
         value: file:./dev.db
       - key: SEED_CUSTOMER_PASSWORD
