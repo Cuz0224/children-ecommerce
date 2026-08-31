@@ -15,14 +15,6 @@
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
-  "pnpm": {
-    "overrides": {
-      "webpack": "5.99.9",
-      "ignore": "7.0.5",
-      "@csstools/css-color-parser": "4.2.1",
-      "@csstools/css-syntax-patches-for-csstree": "1.1.9"
-    }
-  },
   "dependencies": {
     "@eslint-react/eslint-plugin": "^2.3.5",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",

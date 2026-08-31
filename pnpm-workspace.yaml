@@ -1,0 +1,8 @@
+packages:
+  - '.'
+
+overrides:
+  webpack: 5.99.9
+  ignore: 7.0.5
+  '@csstools/css-color-parser': 4.2.1
+  '@csstools/css-syntax-patches-for-csstree': 1.1.9
