@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[6126,[],"OutletBoundary"]
 3:"$Sreact.suspense"
-0:{"buildId":"yd-NOPHWQ5iLKJN0NbyGn","rsc":["$","$1","c",{"children":[["$","div",null,{"data-source-id":"app/(frontend)/frontend-layout-test/page.tsx:2:9","data-source-name":"div","data-source-file":"page.tsx","data-source-line":"2","data-source-column":"9","data-file":"app/(frontend)/frontend-layout-test/page.tsx","data-column":"2:10"}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"_4aPRJrQs0GLR63AWUH9F","rsc":["$","$1","c",{"children":[["$","div",null,{"data-source-id":"app/(frontend)/frontend-layout-test/page.tsx:2:9","data-source-name":"div","data-source-file":"page.tsx","data-source-line":"2","data-source-column":"9","data-file":"app/(frontend)/frontend-layout-test/page.tsx","data-column":"2:10"}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
