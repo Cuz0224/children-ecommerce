@@ -6,9 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -16,9 +14,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,8 +24,6 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec prisma generate
       - run: pnpm run build:server
@@ -38,8 +31,9 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /children-ecommerce
           NEXT_PUBLIC_API_BASE_URL: https://children-ecommerce-api.onrender.com
-      - uses: actions/upload-pages-artifact@v3
+      - name: Publish static site
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./out
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./out
