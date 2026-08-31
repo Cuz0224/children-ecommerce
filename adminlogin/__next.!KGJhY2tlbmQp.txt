@@ -4,5 +4,5 @@
 4:I[2359,[],""]
 5:I[9115,[],""]
 :HL["/children-ecommerce/_next/static/css/e323c6a4df58aa9b.css","style"]
-0:{"buildId":"kE6P1fNugk7Zia_sCU-p8","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/children-ecommerce/_next/static/css/e323c6a4df58aa9b.css","precedence":"next"}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@6"]}}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"yd-NOPHWQ5iLKJN0NbyGn","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/children-ecommerce/_next/static/css/e323c6a4df58aa9b.css","precedence":"next"}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@6"]}}]]}],"loading":null,"isPartial":false}
 6:{}
