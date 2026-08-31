@@ -3,8 +3,8 @@ services:
     name: children-ecommerce-api
     runtime: node
     plan: free
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm exec prisma generate && pnpm run build:server
-    startCommand: sqlite3 prisma/dev.db < prisma/sqlite-init.sql && pnpm exec prisma generate && pnpm exec prisma db seed && pnpm exec ts-node -r tsconfig-paths/register --transpile-only --project tsconfig.server.json server/dev-host.ts
+    buildCommand: npm install --legacy-peer-deps && npx prisma generate && npm run build:server
+    startCommand: sqlite3 prisma/dev.db < prisma/sqlite-init.sql && npx prisma generate && npx prisma db seed && npx ts-node -r tsconfig-paths/register --transpile-only --project tsconfig.server.json server/dev-host.ts
     healthCheckPath: /health
     envVars:
       - key: NODE_VERSION
