@@ -1,0 +1,128 @@
+/* ========================================
+ * THEME-STYLE.CSS - Backend (Admin Console)
+ * ======================================== */
+:root {
+  /* 字体字号 */
+  --font-size-display: 36px;
+  --font-size-h1: 30px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-h4: 16px;
+  --font-size-base: 14px;
+  --font-size-sm-body: 13px;
+  --font-size-caption: 12px;
+
+  /* 字体字重 */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+
+  /* 行高 */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.35;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.65;
+
+  /* 字间距 */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: -0.005em;
+  --letter-spacing-base: 0;
+  --letter-spacing-wide: 0.01em;
+
+  /* 基础色彩 */
+  --color-white: #fffefa;
+  --color-black: #4a5268;
+
+  /* 语义化颜色映射 */
+  --color-background: #fffdf0;
+  --color-foreground: #4a5268;
+  --color-card: #fffefa;
+  --color-card-foreground: #4a5268;
+  --color-popover: #fffefa;
+  --color-popover-foreground: #4a5268;
+
+  /* 主色调 (ToyJoy Berry Pink) */
+  --color-primary: #be185d;
+  --color-primary-foreground: #fff9f5;
+
+  /* 次要色彩 (Warm Biscuit) */
+  --color-secondary: #f1ece1;
+  --color-secondary-foreground: #4a5268;
+
+  /* 静音色彩 (Sand Cream) */
+  --color-muted: #f7f2e6;
+  --color-muted-foreground: #7a8499;
+
+  /* 强调色 (Golden Amber) */
+  --color-accent: #b45309;
+  --color-accent-foreground: #fff9f5;
+
+  /* 功能性颜色 */
+  --color-destructive: #b91c1c;
+  --color-destructive-foreground: #fff9f5;
+  --color-success: #047857;
+  --color-success-foreground: #fff9f5;
+  --color-warning: #b45309;
+  --color-warning-foreground: #fff9f5;
+  --color-info: #1d4ed8;
+  --color-info-foreground: #fff9f5;
+
+  /* 边框和输入框 */
+  --color-border: #e5dec9;
+  --color-input: #e5dec9;
+  --color-ring: #be185d;
+
+  /* 图表色系 */
+  --color-chart-1: #be185d;
+  --color-chart-2: #b45309;
+  --color-chart-3: #047857;
+  --color-chart-4: #1d4ed8;
+  --color-chart-5: #7c3aed;
+
+  /* 侧边栏相关颜色 */
+  --color-sidebar-background: #fdfbf7;
+  --color-sidebar-foreground: #4a5268;
+  --color-sidebar-primary: #be185d;
+  --color-sidebar-primary-foreground: #fff9f5;
+  --color-sidebar-accent: #f1ece1;
+  --color-sidebar-accent-foreground: #4a5268;
+  --color-sidebar-border: #e5dec9;
+  --color-sidebar-ring: #be185d;
+
+  /* 交互态颜色 (Hover/Active) */
+  --color-primary-hover: #9d174d;
+  --color-secondary-hover: #e5dec9;
+  --color-accent-hover: #92400e;
+  --color-destructive-hover: #991b1b;
+
+  /* 链接颜色 */
+  --color-link: #be185d;
+  --color-link-hover: #9d174d;
+
+  /* 骨架屏/加载态 */
+  --color-skeleton: #e5dec9;
+
+  /* 代码块 */
+  --color-code-background: #f1ece1;
+  --color-code-foreground: #4a5268;
+
+  /* 引用块 */
+  --color-blockquote-border: #be185d;
+  --color-blockquote-background: #f7f2e6;
+}
+
+/* theme autofill contract:start */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-foreground) !important;
+  caret-color: var(--color-foreground);
+}
+
+input:autofill {
+  color: var(--color-foreground) !important;
+  caret-color: var(--color-foreground);
+}
+/* theme autofill contract:end */

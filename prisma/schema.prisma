@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+  output = "../prisma-generated/client"
+}
+
+generator json {
+  provider = "prisma-json-types-generator"
+  allowAny = false
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+model AccountUser {
+  id String @id @default(uuid())
+  username String @unique
+  passwordHash String
+  role String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  shoppingCarts ShoppingCart[]
+  cartItems CartItem[]
+  salesOrders SalesOrder[]
+}
+
+model ToyProduct {
+  id String @id @default(uuid())
+  sku String @unique
+  category String
+  ageGroup String
+  unitPrice Decimal
+  originalPrice Decimal?
+  stockCount Int
+  reorderThreshold Int
+  storefrontStatus String
+  productImage String?
+  badge String?
+  name String?
+  subtitle String?
+  description String?
+  longDescription String?
+  /// Product highlights shown as separate storefront bullets.
+  /// ![Array<string>]
+  highlights Json
+  materials String?
+  safetyCertification String?
+  dimensions String?
+  /// Items included in the product box.
+  /// ![Array<string>]
+  boxIncludes Json
+  ratingAverage Decimal?
+  reviewsCount Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  cartItems CartItem[]
+  salesOrderItems SalesOrderItem[]
+}
+
+model ShoppingCart {
+  id String @id @default(uuid())
+  customerId String // FK → AccountUser.id
+  cartStatus String
+  appliedPromoId String? // FK → PromoCode.id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  customer AccountUser @relation(fields: [customerId], references: [id])
+  appliedPromo PromoCode? @relation(fields: [appliedPromoId], references: [id])
+  cartItems CartItem[]
+  salesOrders SalesOrder[]
+}
+
+model CartItem {
+  id String @id @default(uuid())
+  cartId String // FK → ShoppingCart.id
+  productId String // FK → ToyProduct.id
+  quantity Int
+  customerId String // FK → AccountUser.id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  cart ShoppingCart @relation(fields: [cartId], references: [id])
+  product ToyProduct @relation(fields: [productId], references: [id])
+  customer AccountUser @relation(fields: [customerId], references: [id])
+}
+
+model PromoCode {
+  id String @id @default(uuid())
+  code String @unique
+  discountType String
+  discountValue Decimal
+  minSubtotal Decimal?
+  freeShippingThreshold Decimal?
+  isActive Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  shoppingCarts ShoppingCart[]
+}
+
+model SalesOrder {
+  id String @id @default(uuid())
+  customerId String // FK → AccountUser.id
+  sourceCartId String // FK → ShoppingCart.id
+  orderStatus String
+  subtotal Decimal
+  discountAmount Decimal
+  shippingFee Decimal
+  totalAmount Decimal
+  appliedPromoCode String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  customer AccountUser @relation(fields: [customerId], references: [id])
+  sourceCart ShoppingCart @relation(fields: [sourceCartId], references: [id])
+  salesOrderItems SalesOrderItem[]
+}
+
+model SalesOrderItem {
+  id String @id @default(uuid())
+  orderId String // FK → SalesOrder.id
+  productId String // FK → ToyProduct.id
+  quantity Int
+  unitPriceSnapshot Decimal
+  lineSubtotal Decimal
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  order SalesOrder @relation(fields: [orderId], references: [id])
+  product ToyProduct @relation(fields: [productId], references: [id])
+}

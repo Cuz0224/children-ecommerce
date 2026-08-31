@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: children-ecommerce-api
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build:server
+    startCommand: sqlite3 prisma/dev.db < prisma/sqlite-init.sql && pnpm exec prisma generate && pnpm exec prisma db seed && pnpm exec ts-node -r tsconfig-paths/register --transpile-only --project tsconfig.server.json server/dev-host.ts
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: DATABASE_URL
+        value: file:./dev.db
+      - key: SEED_CUSTOMER_PASSWORD
+        generateValue: true
+      - key: SEED_ADMIN_PASSWORD
+        generateValue: true
