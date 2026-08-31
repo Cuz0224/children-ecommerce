@@ -1,0 +1,7 @@
+:HL["/children-ecommerce/_next/static/media/68180864d7f93f02-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/children-ecommerce/_next/static/media/bca7023bf625e650-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/children-ecommerce/_next/static/media/ee40bb094c99a29a-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/children-ecommerce/_next/static/css/f1365093214f7da0.css","style"]
+:HL["/children-ecommerce/_next/static/css/63c8b3307644e6e9.css","style"]
+:HL["/children-ecommerce/_next/static/css/036f53a36d118182.css","style"]
+0:{"buildId":"_FKMKmUgBqFBJ1jvl7BLv","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"(frontend)","paramType":null,"paramKey":"(frontend)","hasRuntimePrefetch":false,"slots":{"children":{"name":"customerregister","paramType":null,"paramKey":"customerregister","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
